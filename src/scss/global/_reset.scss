@@ -1,0 +1,101 @@
+// http://meyerweb.com/eric/tools/css/reset/
+// v2.0 | 20110126
+// License: none (public domain)
+*, *::after, *::before {
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: inherit;
+  border: 0;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  font-size: 100%;
+  text-size-adjust: 100%;
+  vertical-align: baseline;
+}
+// HTML5 display-role reset for older browsers
+article, aside, details, figcaption, figure, time,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote::before, blockquote::after,
+q::before, q::after {
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html, body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  background-color: transparent;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizelegibility;
+  width: 100vw;
+}
+html {
+  box-sizing: border-box;
+  overflow: auto;
+}
+body {
+  font-style: normal;
+  font-variant: normal;
+  letter-spacing: normal;
+  line-height: 1;
+  overflow: auto;
+}
+h1, h2, h3, h4, h5, h6 {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  font-size: inherit;
+  font-weight: inherit;
+  font-style: normal;
+  font-variant: normal;
+  font-family: inherit;
+  letter-spacing: inherit;
+  line-height: inherit;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+u {
+  text-decoration: underline;
+}
+strike, s {
+  text-decoration: line-through;
+}
+ul, ol, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+label {
+  cursor: default;
+}
+input,
+select,
+button,
+textarea {
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+  appearance: none;
+  border: 0 none;
+  padding: 0;
+  display: block;
+  margin: 0;
+}

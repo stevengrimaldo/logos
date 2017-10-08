@@ -1,0 +1,307 @@
+@import './global/config';
+@import './global/mixins';
+@import './global/easing';
+@import './global/grid';
+@import './global/typography';
+
+@include font-face('Gotham', $font-path + '/Gotham_500', 500); // medium
+@include font-face('Gotham', $font-path + '/Gotham_700', 700); // bold
+
+@import './global/reset';
+@import './global/layout';
+
+.quadrant {
+  width: 50vw;
+  height: 50vh;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include mq('max', $laptop) {
+    flex-direction: column;
+  }
+
+  &.darkcyan {
+    background-color: darkcyan;
+
+    h1 {
+      span {
+        -webkit-text-stroke: 1px darkcyan;
+        text-shadow:
+          -23px 20px 0 darkcyan,
+          -26px 23px 0 darkcyan,
+          -26px 20px 0 darkcyan,
+          -29px 20px 0 darkcyan,
+          -29px 23px 0 darkcyan,
+          -23px 23px 0 darkcyan,
+          -33px 20px 0 darkcyan,
+          -32px 20px 0 darkcyan,
+          -33px 24px 0 darkcyan,
+          -23px 24px 0 darkcyan,
+          -38px 20px 0 darkcyan,
+          -41px 23px 0 darkcyan,
+          -41px 24px 0 darkcyan,
+          -41px 20px 0 darkcyan,
+          -22px 24px 0 darkcyan,
+          -43px 24px 0 darkcyan,
+          -43px 20px 0 darkcyan,
+          -43px 22px 0 darkcyan;
+
+          &::after {
+            background-color: $white;
+          }
+
+          &:first-of-type {
+            &::after {
+              top: 45px;
+              right: 44px;
+              width: 57px;
+              height: 44px;
+            }
+          }
+          &:nth-child(2) {
+            &::after {
+              top: 45px;
+              right: 44px;
+              width: 57px;
+              height: 44px;
+            }
+          }
+
+          &:nth-child(3) {
+            &::after {
+              top: 37px;
+              right: 44px;
+              width: 57px;
+              height: 54px;
+            }
+          }
+
+          &:last-of-type {
+            &::before {
+              content: '';
+              position: absolute;
+              top: 106px;
+              right: 86px;
+              width: 22px;
+              transform: skewX(-9deg);
+              opacity: 1;
+              height: 10px;
+            }
+            &::after {
+              top: 37px;
+              right: 44px;
+              width: 68px;
+              height: 102px;
+            }
+          }
+
+        &:last-of-type {
+          &::before {
+            background-color: darkcyan;
+          }
+        }
+      }
+    }
+  }
+  &.tomato {
+    background-color: tomato;
+
+    h1 {
+      span {
+        // -webkit-text-stroke: 1px tomato;
+        text-shadow:
+          -23px 20px 0 tomato,
+          -26px 23px 0 tomato,
+          -26px 20px 0 tomato,
+          -29px 20px 0 tomato,
+          -29px 23px 0 tomato,
+          -23px 23px 0 tomato,
+          -33px 20px 0 tomato,
+          -32px 20px 0 tomato,
+          -33px 24px 0 tomato,
+          -23px 24px 0 tomato,
+          -38px 20px 0 tomato,
+          -41px 23px 0 tomato,
+          -41px 24px 0 tomato,
+          -41px 20px 0 tomato,
+          -22px 24px 0 tomato,
+          -43px 24px 0 tomato,
+          -43px 20px 0 tomato,
+          -43px 22px 0 tomato;
+
+        &::after {
+          background-color: $white;
+          opacity: 1;
+        }
+
+        &:first-of-type {
+          &::after {
+            top: 45px;
+            right: 44px;
+            width: 57px;
+            height: 44px;
+          }
+        }
+        &:nth-child(2) {
+          &::after {
+            top: 45px;
+            right: 44px;
+            width: 57px;
+            height: 44px;
+          }
+        }
+
+        &:nth-child(3) {
+          &::after {
+            top: 37px;
+            right: 44px;
+            width: 57px;
+            height: 54px;
+          }
+        }
+
+        &:last-of-type {
+          &::before {
+            background-color: tomato;
+            opacity: 0;
+            content: '';
+            position: absolute;
+            top: 106px;
+            right: 86px;
+            width: 22px;
+            transform: skewX(-9deg);
+            opacity: 1;
+            height: 10px;
+          }
+          &::after {
+            top: 37px;
+            right: 44px;
+            width: 68px;
+            height: 102px;
+          }
+        }
+      }
+    }
+  }
+  &.mediumseagreen {
+    background-color: mediumseagreen;
+
+    h1 {
+      span {
+        text-shadow: -12px 8px 0 mediumseagreen, -20px 15px 0 $white, -31px 24px mediumseagreen;
+        -webkit-text-stroke: 1px mediumseagreen;
+      }
+    }
+  }
+  &.gold {
+    background-color: gold;
+
+    h1 {
+      span {
+        color: gold;
+        position: relative;
+
+        &::before {
+          width: auto;
+          height: auto;
+          z-index: -1;
+          top: 18px;
+          opacity: 1;
+          background-color: transparent;
+          color: gold;
+          left: 0px;
+          position: absolute;
+        }
+        &::after {
+          width: auto;
+          height: auto;
+          z-index: -1;
+          top: 9px;
+          opacity: 1;
+          background-color: transparent;
+          color: #fff;
+          -webkit-text-stroke: 1px gold;
+          left: 11px;
+        }
+
+        &:first-of-type {
+          &::before {
+            content: 'S';
+          }
+          &::after {
+            content: 'S';
+          }
+        }
+
+        &:nth-child(2) {
+          &::before {
+            content: 'R';
+          }
+          &::after {
+            content: 'R';
+          }
+        }
+
+        &:nth-child(3) {
+          &::before {
+            content: 'K';
+          }
+          &::after {
+            content: 'K';
+          }
+        }
+
+        &:last-of-type {
+          &::before {
+            content: 'G';
+          }
+          &::after {
+            content: 'G';
+          }
+        }
+      }
+    }
+  }
+}
+
+.loud {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+
+  h1 {
+    background-color: #fff;
+    border-radius: 15px;
+    font-size: 200px;
+    width: 550px;
+    padding: 70px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    transform: scale(0.5);
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -2px 2px 8px 0px rgba($black, 0.25);
+    font-family: 'Fugaz One', cursive;
+
+    span {
+      display: inline-block;
+      flex-basis: 50%;
+      color: $white;
+      text-align: center;
+      position: relative;
+      transform: translate3d(15px, 0, 0);
+
+      &::before,
+      &::after {
+        position: absolute;
+        content: '';
+        opacity: 0;
+      }
+    }
+  }
+}

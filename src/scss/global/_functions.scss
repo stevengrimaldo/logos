@@ -1,0 +1,12 @@
+@function pc($target, $context, $padding: 0) {
+  @return percentage($target / ($context - $padding));
+}
+
+@function rem($value) {
+  @return ($value / 16px);
+}
+
+@function vw($target) {
+  $vw-context: (1440 * 0.01) * 1px;
+  @return ($target / $vw-context) * 1vw;
+}

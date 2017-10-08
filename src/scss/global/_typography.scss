@@ -1,0 +1,8 @@
+@import './_mixins.scss';
+
+%GothamMedium {
+  @include font(500, $gotham);
+}
+%GothamBold {
+  @include font(700, $gotham);
+}

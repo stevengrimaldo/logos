@@ -1,0 +1,42 @@
+// Base Colors
+$white: #fff;
+$black: #000;
+
+// Main Colors
+$alizarin-crimson: #e51b24;
+$flame-pea: #e15f2c;
+$tulip-tree: #ffd000;
+$river-bed: #455560;
+$cod-gray: #111;
+$alabaster: #f7f7f7;
+$dove-gray: #696969;
+$alto: #dfdfdf;
+$callout: rgba($black, 0.4);
+
+// Utility
+$text-color: $dove-gray;
+$link-color: $cod-gray;
+$link-color-hover: $cod-gray;
+
+$base-font-size: 16px;
+$base-font-weight: 300;
+$base-line-height: $base-font-size + 8px;
+$media-path-prod: '';
+$media-path: '/media';
+$image-path: $media-path + '/img';
+$svg-path: $media-path + '/svg';
+$font-path: $media-path + '/fonts';
+
+$gotham: 'Gotham';
+
+$fallback: Helvetica, Arial, sans-serif;
+
+$base: 1204;
+$desktop: 1440px;
+$laptop: 1024;
+$tablet: 768;
+$phablet: 667;
+$mobile: 480;
+
+$module-padding: 100px;
+$half-module-padding: $module-padding / 2;

@@ -1,0 +1,53 @@
+@import 'functions';
+
+// =============================================================================
+// Responsive Width
+// =============================================================================
+@mixin rspw($max-width, $context, $padding, $margin) {
+
+  @if ($context) {
+    @if ($max-width) {
+      $newcontext: ($context - $padding - $margin);
+
+      max-width: #{$max-width}px;
+      width: pc($max-width, $newcontext);
+    }
+  }
+}
+
+// =============================================================================
+// Column Creator
+// Supports
+// gutter    - 20px
+// oneCol    - 82px
+// twoCol    - 184px
+// threeCol  - 286px
+// fourCol   - 388px
+// fiveCol   - 490px
+// sixCol    - 592px
+// sevenCol  - 694px
+// eightCol  - 796px
+// nineCol   - 898px
+// tenCol    - 1000px
+// elevenCol - 1102px
+// twelveCol - 1204px
+// =============================================================================
+@mixin col($columns: null, $container: $base, $padding: 0, $margin: 0) {
+  $parent: $container;
+  $columnWidth: 82;
+  $gutter: 20;
+
+  @if $columns {
+    @if $columns <= 11 {
+      $width: (($columns * $columnWidth) + (($columns - 1) * $gutter));
+
+      @if ($container <= 12) {
+        $parent: (($container * $columnWidth) + (($container - 1) * $gutter));
+      }
+
+      @include rspw($width, $parent, $padding, $margin);
+
+      @content;
+    }
+  }
+}
