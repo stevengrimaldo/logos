@@ -2,10 +2,8 @@
 @import './global/mixins';
 @import './global/easing';
 @import './global/grid';
-@import './global/typography';
 
-@include font-face('Gotham', $font-path + '/Gotham_500', 500); // medium
-@include font-face('Gotham', $font-path + '/Gotham_700', 700); // bold
+@import url('https://fonts.googleapis.com/css?family=Montserrat:700');
 
 @import './global/reset';
 @import './global/layout';
@@ -13,7 +11,7 @@
 .quadrant {
   width: 50vw;
   height: 50vh;
-  flex: 1;
+  flex: 1 1 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -48,54 +46,54 @@
           -43px 20px 0 darkcyan,
           -43px 22px 0 darkcyan;
 
+        &::after {
+          background-color: $white;
+        }
+
+        &:first-of-type {
           &::after {
-            background-color: $white;
+            top: 45px;
+            right: 44px;
+            width: 57px;
+            height: 44px;
           }
+        }
+        &:nth-child(2) {
+          &::after {
+            top: 45px;
+            right: 44px;
+            width: 57px;
+            height: 44px;
+          }
+        }
 
-          &:first-of-type {
-            &::after {
-              top: 45px;
-              right: 44px;
-              width: 57px;
-              height: 44px;
-            }
+        &:nth-child(3) {
+          &::after {
+            top: 37px;
+            right: 44px;
+            width: 57px;
+            height: 54px;
           }
-          &:nth-child(2) {
-            &::after {
-              top: 45px;
-              right: 44px;
-              width: 57px;
-              height: 44px;
-            }
-          }
+        }
 
-          &:nth-child(3) {
-            &::after {
-              top: 37px;
-              right: 44px;
-              width: 57px;
-              height: 54px;
-            }
+        &:last-of-type {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 106px;
+            right: 86px;
+            width: 22px;
+            transform: skewX(-9deg);
+            opacity: 1;
+            height: 10px;
           }
-
-          &:last-of-type {
-            &::before {
-              content: '';
-              position: absolute;
-              top: 106px;
-              right: 86px;
-              width: 22px;
-              transform: skewX(-9deg);
-              opacity: 1;
-              height: 10px;
-            }
-            &::after {
-              top: 37px;
-              right: 44px;
-              width: 68px;
-              height: 102px;
-            }
+          &::after {
+            top: 37px;
+            right: 44px;
+            width: 68px;
+            height: 102px;
           }
+        }
 
         &:last-of-type {
           &::before {
@@ -165,7 +163,6 @@
         &:last-of-type {
           &::before {
             background-color: tomato;
-            opacity: 0;
             content: '';
             position: absolute;
             top: 106px;
