@@ -1,5 +1,5 @@
 import '../scss/app.scss';
 
 window.addEventListener('load', () => {
-  console.log('skrg');
+  console.log('srkg');
 });
