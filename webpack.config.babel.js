@@ -115,7 +115,6 @@ export default {
       minifiy: {
         collapseWhitespace: true
       },
-      favicon: './media/img/favicon.ico',
       cache: true,
       inject: 'body'
     }),
